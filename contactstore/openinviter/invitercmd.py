@@ -147,6 +147,8 @@ _PROVIDER_MAP = {
     "live": "hotmail",
     "msn": "msn",
     "aol": "aol",
+    "plaxo" : "plaxo",
+    "lycos" : "lycos",
 }
 
 def get_contacts(email, password, test_mode=False):
