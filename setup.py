@@ -34,7 +34,7 @@ def _get_files():
 # django, php
 setup(
     name = "django-contactstore",
-    version = "0.1.5",
+    version = "0.1.6",
     description = "an openinviter based contact importer",
     long_description = """Allows importing and invite sending with OpenInviter using PHP.""",
     license = "GPLv2",

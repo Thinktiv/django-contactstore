@@ -151,6 +151,10 @@ _PROVIDER_MAP = {
     "lycos" : "lycos",
 }
 
+_DEFAULT_PROVIDER = 'gmail'
+def get_provider_from_domain(domain_name):
+    return _PROVIDER_MAP.get(domain_name, _DEFAULT_PROVIDER)
+
 def get_contacts(email, password, test_mode=False):
     """The contacts list is a unique list of contacts.
 
@@ -167,7 +171,7 @@ def get_contacts(email, password, test_mode=False):
     if domain:
         domain_name = domain.group("provider")
         try:
-            provider = _PROVIDER_MAP.get(domain_name)
+            provider = get_provider_from_domain(domain_name)
         except KeyError, e:
             raise UnsupportedImporterException(e)
         else:
